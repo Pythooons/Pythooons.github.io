@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Products - Kawaii-Cup</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: monospace;
+            background-color: navy;
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 16pt;
+            font-weight: bold;
+            text-align: center; 
+            margin-top: 40px;
+            color: white;
+        }
+
+        p {
+            position: relative;
+            z-index: 1;
+            font-size: 16pt;
+            text-align: center; 
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .dropdown-content {
+            display: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #eee;
+        }
+
+        
+        .search-bar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            font-family: monospace; 
+        }
+
+        .product-images {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .product-images img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            cursor: pointer; 
+        }
+
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9); 
+            padding-top: 50px;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7); 
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="dropdown">
+        <span>Menu</span>
+        <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="missionstatement.html">Mission Statement</a>
+            <a href="socials.html">Socials</a>
+            <a href="giveaways.html">Discounts</a>
+        </div>
+    </div>
+    
+    <input type="text" class="search-bar" placeholder="Search">
+    <h1>Products Offered by Kawaii-Cup</h1>
+    <div class="product-images">
+        <img src="jack.webp" alt="Jack Skelly" onclick="openModal('jack.webp')">
+        <img src="cow.webp" alt="Cute Cow" onclick="openModal('cow.webp')">
+        <img src="jjk.webp" alt="Jujutsu Kaisen" onclick="openModal('jjk.webp')">
+        <img src="poochita.webp" alt="Poochita" onclick="openModal('poochita.webp')">
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+
+    <footer>
+        Customer service (<a href="socials.html">SOCIALS</a>)
+        Copyright © 2024 Kawaii-Cup |
+    </footer>
+</body>
+</html>

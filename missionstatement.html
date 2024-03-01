@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Mission Statement - Kawaii-Cup</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: monospace;
+            background-color: #56195A;
+            color: #14FF01; 
+            position: relative;
+            min-height: 100vh; /* Ensure body covers entire viewport height */
+        }
+
+        h1 {
+            font-size: 16pt;
+            font-weight: bold;
+            text-align: center; 
+            margin-top: 40px; 
+        }
+
+        p {
+            font-size: 16pt;
+            color: #14FF01;
+            margin-bottom: 20px; 
+            text-align: left; 
+            margin-left: 20px; 
+        }
+
+        ul {
+            text-align: left; 
+            padding-left: 40px; 
+            margin-left: 0; 
+        }
+
+        ul li {
+            margin-bottom: 10px; 
+        }
+
+        .center-image {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .center-image img {
+            width: 200px; 
+            height: auto;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.7); 
+            padding: 10px;
+            text-align: center;
+            display: none; /* Initially hide the footer */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #14FF01;
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        .centered-text {
+            text-align: center; 
+        }
+
+        .search-bar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            font-family: monospace; 
+        }
+
+        
+        .dropdown {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .dropdown-content {
+            display: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <span>Menu</span>
+        <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="products.html">Products</a>
+            <a href="socials.html">Socials</a>
+            <a href="giveaways.html">Discounts</a>
+        </div>
+    </div>
+    
+    <input type="text" class="search-bar" placeholder="Search">
+    <h1>Mission Statement - Kawaii-Cup</h1>
+    <div class="center-image">
+        <img src="me.jpg" alt="Me">
+    </div>
+    <p class="centered-text">My name is Joshua Carroll Co-founder of Kawaii-Cup and our goal is to provide the world with an inexpensive quality eco-friendly product!</p>
+    <p class="centered-text">Mission Statement</p>
+    <hr> 
+    <p>Our end-of-year goal for 2024 is to have our product in at least one more store and increase our production as well as our forecasted sales. To accomplish our goals, we must:</p>
+    <ul> 
+        <li>Establish an online presence through and new and modern website.</li>
+        <li>Establish a solid means of communication and ways of contacting us.</li>
+        <li>Print business cards.</li>
+        <li>Attend vendor events such as ICC vendor fair in the spring.</li>
+    </ul>
+    <p>We will develop a user-friendly and attractive website to reach all walks of life while simultaneously educating individuals on the benefits of using eco-friendly products and the impact of living a healthy lifestyle.</p>
+    <hr> 
+    <ul> 
+        <li>Provide first-person testimony via various links and articles about health and eco-friendly products.</li>
+        <li>Provide a means to check out and various ways to pay.</li>
+        <li>Keep all social media pages up to date with the website as new events and products are listed.</li>
+        <li>Actively engage with our customer base by having events, giveaways and meet-and-greets.</li>
+    </ul>
+	<br><br><br><br>
+    <footer id="myFooter">
+        Customer service (<a href="socials.html">SOCIALS</a>)
+        Copyright © 2024 Kawaii-Cup |
+    </footer>
+
+    <script>
+        window.onscroll = function() {
+            var d = document.documentElement;
+            var offset = d.scrollTop + window.innerHeight;
+            var height = d.offsetHeight;
+
+            if (offset >= height) {
+                document.getElementById("myFooter").style.display = "block";
+            } else {
+                document.getElementById("myFooter").style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Kawaii-Cup</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: monospace;
+        }
+
+        img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 16pt;
+            font-weight: bold;
+            text-align: center; 
+            margin-top: 40px; 
+        }
+
+        p {
+            position: relative;
+            z-index: 1;
+            font-size: 16pt;
+            text-align: center; 
+        }
+
+        ul {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7); 
+            padding: 10px; 
+            margin: 0; 
+            z-index: 1000; 
+            text-align: center; 
+        }
+
+        ul li {
+            display: inline;
+            margin-right: 20px; 
+        }
+
+        ul li:last-child {
+            margin-right: 0;
+        }
+
+        ul li a:hover {
+            color: #ff0000; 
+        }
+		
+		.dropdown {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .dropdown-content {
+            display: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #eee;
+        }
+        
+        
+        .search-bar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            font-family: monospace; 
+        }
+
+    body,td,th {
+    color: #FB0000;
+}
+	footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7); 
+            text-align: center;
+            padding: 10px;
+		
+    </style>
+</head>
+<body>
+    <img src="Cutecup.jpg" alt="Cute Cup Image">
+    <div class="dropdown">
+        <span>Menu</span>
+        <div class="dropdown-content">
+            <a href="products.html">Products</a>
+            <a href="events.html">Events</a>
+            <a href="missionstatement.html">Mission Statement</a>
+            <a href="socials.html">Socials</a>
+            <a href="giveaways.html">Discounts</a>
+        </div>
+    </div>
+   
+    <input type="text" class="search-bar" placeholder="Search">
+    <h1>Homepage for Kawaii-Cup</h1>
+    <hr>
+    <p>Welcome to Kawaii-Cup where our goal is to provide you with quality tumblers, mugs, and accessories.</p>
+<footer>
+        Customer service (<a href="socials.html">SOCIALS</a>)
+		Copyright © 2024 Kawaii-Cup |
+</footer>
+</body>
+</html>

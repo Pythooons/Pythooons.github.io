@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Socials</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        ul.navbar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            margin: 0;
+            z-index: 1000;
+            text-align: center;
+            list-style-type: none;
+        }
+
+        ul.navbar li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        ul.navbar li:last-child {
+            margin-right: 0;
+        }
+
+        ul.navbar li a:hover {
+            color: #ff0000;
+        }
+
+        .content {
+            margin-top: 60px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        ul.links {
+            margin: auto;
+            width: fit-content;
+            padding: 10px;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        ul.links li {
+            margin-bottom: 10px;
+        }
+
+        ul.links li img {
+            width: 20px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        ul.links li a:hover {
+            color: #ff0000;
+        }
+
+        table {
+            margin: auto;
+            width: fit-content;
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+
+        table td {
+            padding: 8px;
+            border-bottom: 2px solid black;
+        }
+
+        table tr:last-child td {
+            border-bottom: none;
+        }
+
+		img.background {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+
+        ul#hours {
+            text-align: center;
+            margin-left: 0;
+            padding-left: 0;
+            z-index: 2;
+            list-style-type: none;
+            border-bottom: 2px solid black;
+        }
+
+        ul#hours li {
+            text-align: center;
+            margin-left: 0;
+            padding-left: 0;
+        }
+		
+       
+        .search-bar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif; ]
+        }
+
+        
+        .dropdown {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .dropdown-content {
+            display: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <img src="Cutecup.jpg" class="background" alt="Cute Cup Image">
+
+    
+    <div class="dropdown">
+        <span>Menu</span>
+        <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="events.html">Events</a>
+            <a href="missionstatement.html">Mission Statement</a>
+            <a href="giveaways.html">Discounts</a>
+        </div>
+    </div>
+
+    
+    <input type="text" class="search-bar" placeholder="Search">
+
+    <div class="content">
+        <table>
+            <tr>
+                <td>
+                    <ul class="links">
+                        <li><img src="facebook_logo.jpg" alt="Facebook Logo"><a href="https://www.facebook.com/profile.php?id=100094418108236">Follow our Facebook for new products and sales!</a></li>
+                        <li><img src="tiktok_logo.jpg" alt="TikTok Logo"><a href="https://www.tiktok.com/@kawaiicupemporium?is_from_webapp=1&sender_device=pc">Check out our page for new products and more!</a></li>
+                        <li><img src="gmail_logo.jpg" alt="Gmail Logo"><a href="mailto:kawaiicupemporium@gmail.com">Contact us for business inquiries and product complaints.</a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul id="hours">
+                        <li>Hours of Operation:</li>
+                        <li>Monday - Friday, 9:00 AM - 5:00 PM</li>
+                        <li>Saturday - Sunday, Closed</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td id="feedback">
+                    <h2>Feedback</h2>
+                    <form>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName"><br><br>
+                        
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName"><br><br>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email"><br><br>
+                        
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone"><br><br>
+                        
+                        <label for="issue">Issue:</label>
+                        <select id="issue" name="issue">
+                            <option value="product">Product Inquiry</option>
+                            <option value="shipping">Shipping Issue</option>
+                            <option value="payment">Payment Problem</option>
+                            <option value="other">Other</option>
+                        </select><br><br>
+                        
+                        <input type="submit" value="Submit">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td id="date"></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        var currentDate = new Date();
+        var dateElement = document.getElementById('date');
+        dateElement.textContent = 'Current Date: ' + currentDate.toDateString();
+    </script>
+</body>
+</html>
